@@ -7,7 +7,7 @@ import { cn } from '@/lib/utils';
 interface QuizModalProps {
   isOpen: boolean;
   onClose: () => void;
-  onComplete: (skinType: string, answers: Record<string, string>) => void;
+  onComplete: (skinType: string) => void;
 }
 
 const questions = [
@@ -109,7 +109,7 @@ export default function QuizModal({ isOpen, onClose, onComplete }: QuizModalProp
         setIsLoading(true);
         setTimeout(() => {
           const skinType = deriveSkinType({ ...answers, [`q${questionId}`]: value });
-          onComplete(skinType, { ...answers, [`q${questionId}`]: value });
+          onComplete(skinType);
         }, 2000);
       } else {
         setCurrentStep(questionId + 1);

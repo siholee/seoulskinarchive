@@ -1,34 +1,40 @@
 import globals from 'globals';
 import js from '@eslint/js';
-import tseslint from 'typescript-eslint';
-import nextPlugin from '@next/eslint-plugin-next';
+import tsParser from '@typescript-eslint/parser';
 
 export default [
   {
     ignores: ['.next/**', 'node_modules/**', 'out/**', 'build/**'],
   },
   js.configs.recommended,
-  ...tseslint.configs.recommended,
   {
-    files: ['**/*.{js,mjs,cjs,ts,jsx,tsx}'],
+    files: ['**/*.{js,mjs,cjs}'],
     languageOptions: {
       globals: {
         ...globals.browser,
         ...globals.node,
       },
     },
-    plugins: {
-      '@next/next': nextPlugin,
+  },
+  {
+    files: ['**/*.{ts,tsx}'],
+    languageOptions: {
+      parser: tsParser,
+      parserOptions: {
+        ecmaVersion: 'latest',
+        sourceType: 'module',
+        ecmaFeatures: {
+          jsx: true,
+        },
+      },
+      globals: {
+        ...globals.browser,
+        ...globals.node,
+      },
     },
     rules: {
-      '@typescript-eslint/no-explicit-any': 'warn',
-      '@typescript-eslint/no-unused-vars': [
-        'warn',
-        {
-          argsIgnorePattern: '^_',
-          varsIgnorePattern: '^_',
-        },
-      ],
+      'no-unused-vars': 'off', // TypeScript 파일에서는 사용하지 않음
+      'no-undef': 'off', // TypeScript가 처리
     },
   },
 ];

@@ -1,6 +1,5 @@
 import { fetchBlogPosts } from '@/lib/yurasis-api';
 import BlogCard from '@/components/BlogCard';
-import { Suspense } from 'react';
 
 export default async function BlogPage() {
   const { posts } = await fetchBlogPosts(1, 12);

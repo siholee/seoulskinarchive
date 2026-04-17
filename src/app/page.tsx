@@ -10,7 +10,7 @@ export default function HomePage() {
   const [isQuizOpen, setIsQuizOpen] = useState(false);
   const [quizResult, setQuizResult] = useState<string | null>(null);
 
-  const handleQuizComplete = (skinType: string, answers: any) => {
+  const handleQuizComplete = (skinType: string) => {
     setQuizResult(skinType);
     setIsQuizOpen(false);
     // 퀴즈 완료 후 자동으로 사전등록 섹션으로 스크롤

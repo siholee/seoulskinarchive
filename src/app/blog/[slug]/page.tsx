@@ -9,12 +9,13 @@ export async function generateStaticParams() {
   }));
 }
 
-export default async function BlogPostPage({ params }: { params: { slug: string } }) {
+export default async function BlogPostPage({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params;
   let post;
   
   try {
-    post = await fetchBlogPost(params.slug);
-  } catch (error) {
+    post = await fetchBlogPost(slug);
+  } catch {
     notFound();
   }
 
