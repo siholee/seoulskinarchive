@@ -26,7 +26,7 @@ seoulskinarchive/
 │       ├── yurasis-api.ts       # Yurasis 블로그 API
 │       └── utils.ts
 ├── deploy.ps1                   # 배포 스크립트
-├── ecosystem.config.js          # PM2 설정
+├── ecosystem.config.cjs         # PM2 설정
 └── package.json
 ```
 

@@ -1,0 +1,50 @@
+{
+  "nav": {
+    "home": "ホーム",
+    "brandStory": "ブランドストーリー",
+    "beautyBox": "ビューティーボックス",
+    "blog": "ブログ",
+    "login": "ログイン",
+    "register": "会員登録",
+    "myPage": "マイページ",
+    "skinQuiz": "肌診断を始める"
+  },
+  "hero": {
+    "badge": "30代からのK-ビューティキュレーション",
+    "title": "ソウルの秘密を、",
+    "titleEm": "あなたの肌へ",
+    "description": "ソウルで発見した検証済みK-ビューティ製品を毎月キュレーションして世界中にお届けします。皮膚科専門医が選んだプレミアムルーティン。",
+    "ctaPrimary": "事前登録する",
+    "ctaSecondary": "サービスを見る"
+  },
+  "stats": {
+    "launch": "ローンチ予定",
+    "boxes": "キュレーションボックス",
+    "kbeauty": "K-ビューティ"
+  },
+  "footer": {
+    "tagline": "Seoul's best-kept skincare secrets, curated for your skin.",
+    "copyright": "© 2026 Seoul Skin Archive. All rights reserved.",
+    "contact": "お問い合わせ"
+  },
+  "about": {
+    "title": "私たちのストーリー",
+    "subtitle": "Seoul Skin Archiveが生まれた理由"
+  },
+  "beautyBox": {
+    "title": "Seoul Beauty Box",
+    "subtitle": "毎月新しくキュレーションされるプレミアムK-ビューティ"
+  },
+  "quiz": {
+    "title": "肌診断",
+    "subtitle": "あなたの肌タイプを分析します",
+    "start": "診断を始める"
+  },
+  "my": {
+    "title": "マイページ",
+    "settings": "設定",
+    "cart": "カート",
+    "checkout": "決済",
+    "orders": "注文履歴"
+  }
+}

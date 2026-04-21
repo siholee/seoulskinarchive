@@ -2,13 +2,15 @@
 
 import React, { useState } from 'react';
 import { supabase } from '@/lib/supabase';
+import { Locale } from '@/lib/i18n';
 import { CheckCircle } from 'lucide-react';
 
 interface RegisterFormProps {
   quizResult?: string | null;
+  lang?: Locale;
 }
 
-export default function RegisterForm({ quizResult }: RegisterFormProps) {
+export default function RegisterForm({ quizResult, lang = 'ko' }: RegisterFormProps) {
   const [formData, setFormData] = useState({
     name: '',
     email: '',

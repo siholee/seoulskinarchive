@@ -1,16 +1,20 @@
 'use client';
 
 import { BlogPost } from '@/lib/yurasis-api';
+import { Locale } from '@/lib/i18n';
 import { Calendar, User } from 'lucide-react';
 
 interface BlogCardProps {
   post: BlogPost;
+  lang?: Locale;
 }
 
-export default function BlogCard({ post }: BlogCardProps) {
+export default function BlogCard({ post, lang = 'ko' }: BlogCardProps) {
+  const locale = lang === 'ko' ? 'ko-KR' : lang === 'en' ? 'en-US' : 'ja-JP';
+  
   return (
     <a
-      href={`/blog/${post.slug}`}
+      href={`/${lang}/blog/${post.slug}`}
       className="group block bg-sand rounded-2xl overflow-hidden border-2 border-camel/20 hover:border-sage hover:shadow-xl transition-all duration-300"
     >
       {/* Cover Image */}
@@ -67,7 +71,7 @@ export default function BlogCard({ post }: BlogCardProps) {
           <div className="flex items-center gap-1">
             <Calendar className="w-3 h-3" />
             <time dateTime={post.publishedAt}>
-              {new Date(post.publishedAt).toLocaleDateString('ko-KR', {
+              {new Date(post.publishedAt).toLocaleDateString(locale, {
                 year: 'numeric',
                 month: 'short',
                 day: 'numeric',

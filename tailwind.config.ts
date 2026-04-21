@@ -12,6 +12,8 @@ const config: Config = {
         cream: '#F5F0E8',
         sand: '#E8DECE',
         camel: '#C4A882',
+        mocha: '#7A6652',
+        espresso: '#3D2E22',
         sage: {
           light: '#A8C4AC',
           DEFAULT: '#6B8C6F',

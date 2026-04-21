@@ -117,7 +117,7 @@ echo "  → PM2 재시작..."
 if pm2 describe seoulskinarchive > /dev/null 2>&1; then
   pm2 restart seoulskinarchive
 else
-  pm2 start ecosystem.config.js
+  pm2 start ecosystem.config.cjs
   pm2 save
 fi
 
@@ -126,7 +126,9 @@ pm2 info seoulskinarchive
 "@
 
 Write-Host "  ⚙ 배포 실행 중..."
-& ssh -i "$SSH_KEY" -o StrictHostKeyChecking=no $TARGET $DEPLOY_SCRIPT
+# Windows CRLF → LF 변환 (bash 호환)
+$DEPLOY_SCRIPT_LF = $DEPLOY_SCRIPT -replace "`r`n", "`n"
+$DEPLOY_SCRIPT_LF | & ssh -i "$SSH_KEY" -o StrictHostKeyChecking=no $TARGET "bash -s"
 
 Write-Ok "배포 완료"
 

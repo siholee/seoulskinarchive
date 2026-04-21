@@ -1,16 +1,10 @@
 import React from 'react';
-import type { Metadata } from 'next';
 import './globals.css';
+import Navbar from '@/components/Navbar';
 
-export const metadata: Metadata = {
-  title: 'Seoul Skin Archive - K-Beauty Secrets Curated for You',
-  description: "Seoul's best-kept skincare secrets. Premium K-beauty packages curated for your unique skin.",
-  keywords: 'K-beauty, Seoul, skincare, Korean cosmetics, beauty package',
-  openGraph: {
-    title: 'Seoul Skin Archive - K-Beauty Secrets',
-    description: "Seoul's best-kept skincare secrets curated for you",
-    type: 'website',
-  },
+export const metadata = {
+  title: 'Seoul Skin Archive',
+  description: "Seoul's best-kept skincare secrets, curated for your skin.",
 };
 
 export default function RootLayout({
@@ -20,7 +14,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ko">
-      <body>{children}</body>
+      <body>
+        <Navbar />
+        {children}
+      </body>
     </html>
   );
 }

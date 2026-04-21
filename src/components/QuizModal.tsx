@@ -2,12 +2,14 @@
 
 import { useState, useEffect } from 'react';
 import { X, ChevronLeft } from 'lucide-react';
+import { Locale } from '@/lib/i18n';
 import { cn } from '@/lib/utils';
 
 interface QuizModalProps {
   isOpen: boolean;
   onClose: () => void;
   onComplete: (skinType: string) => void;
+  lang?: Locale;
 }
 
 const questions = [

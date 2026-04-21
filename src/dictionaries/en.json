@@ -1,0 +1,50 @@
+{
+  "nav": {
+    "home": "Home",
+    "brandStory": "Brand Story",
+    "beautyBox": "Beauty Box",
+    "blog": "Blog",
+    "login": "Login",
+    "register": "Sign Up",
+    "myPage": "My Page",
+    "skinQuiz": "Start Skin Quiz"
+  },
+  "hero": {
+    "badge": "Premium K-Beauty Curation for 30+",
+    "title": "Seoul's Secrets,",
+    "titleEm": "For Your Skin",
+    "description": "Curated K-beauty products discovered in Seoul, delivered worldwide every month. Premium routines selected by dermatologists.",
+    "ctaPrimary": "Pre-Register Now",
+    "ctaSecondary": "Learn More"
+  },
+  "stats": {
+    "launch": "Launching Soon",
+    "boxes": "Curated Boxes",
+    "kbeauty": "K-Beauty"
+  },
+  "footer": {
+    "tagline": "Seoul's best-kept skincare secrets, curated for your skin.",
+    "copyright": "© 2026 Seoul Skin Archive. All rights reserved.",
+    "contact": "Contact"
+  },
+  "about": {
+    "title": "Our Story",
+    "subtitle": "Why Seoul Skin Archive Was Born"
+  },
+  "beautyBox": {
+    "title": "Seoul Beauty Box",
+    "subtitle": "Premium K-Beauty Curated Monthly"
+  },
+  "quiz": {
+    "title": "Skin Quiz",
+    "subtitle": "Analyze Your Skin Type",
+    "start": "Start Quiz"
+  },
+  "my": {
+    "title": "My Page",
+    "settings": "Settings",
+    "cart": "Cart",
+    "checkout": "Checkout",
+    "orders": "Order History"
+  }
+}
